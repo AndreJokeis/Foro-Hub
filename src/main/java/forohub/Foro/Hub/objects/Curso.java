@@ -24,4 +24,10 @@ public class Curso {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "curso")
     List<Topico> topico;
+
+    public Curso(long id, String nombre, Categoria categoria) {
+        this.id = id;
+        this.nombre = nombre;
+        this.categoria = categoria;
+    }
 }

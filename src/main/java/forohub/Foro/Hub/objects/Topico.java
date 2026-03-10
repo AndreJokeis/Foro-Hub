@@ -35,8 +35,8 @@ public class Topico {
     public Topico(DatosRegistroTopico datos, Usuario usuario, Curso curso) {
         this.titulo = datos.titulo();
         this.mensaje = datos.mensaje();
-        this.fechaDeCreacion = datos.fechaDeCreacion();
-        this.status = datos.status();
+        this.fechaDeCreacion = LocalDate.now();
+        this.status = Status.ACTIVO;
         this.activo = true;
         this.usuario = usuario;
         this.curso = curso;
@@ -45,7 +45,7 @@ public class Topico {
     public void actualizar(DatosActualizarTopico datos){
         this.titulo = datos.titulo();
         this.mensaje = datos.mensaje();
-        this.status = datos.status();
+        this.status = Status.RESUELTO;
     }
 
     public void eliminar(){

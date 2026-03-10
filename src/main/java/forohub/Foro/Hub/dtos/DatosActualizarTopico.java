@@ -10,8 +10,6 @@ public record DatosActualizarTopico(
         @NotBlank
         String titulo,
         @NotBlank
-        String mensaje,
-        @NotNull
-        Status status
+        String mensaje
 ) {
 }
